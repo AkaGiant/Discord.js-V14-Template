@@ -17,5 +17,9 @@ export default async function (interaction, client, handler) {
         console.error("Error handling autocomplete interaction:", error);
       }
     }
+  } else if (interaction.isButton()) {
+    const buttonId = interaction.customId;
+  } else if (interaction.isSelectMenu()) {
+    const selectId = interaction.customId;
   }
 }
